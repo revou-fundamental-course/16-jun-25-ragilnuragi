@@ -23,7 +23,7 @@ nav a {
   cursor: pointer;
 }
 
-nav a:active {
+.active {
   background-color: aqua;
 }
 
@@ -57,16 +57,25 @@ input[type="number"] {
   text-align: center;
 }
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-  background-color: #04aa6d;
+button {
+  background-color: #04aa6d; /* Green */
   border: none;
   color: white;
-  padding: 10px;
+  padding: 13px;
+  text-align: center;
   text-decoration: none;
-  margin: 4px 2px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
   cursor: pointer;
+  width: 20%;
+  align-self: center;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: greenyellow;
+  color: black;
 }
 
 .form-hitung {
