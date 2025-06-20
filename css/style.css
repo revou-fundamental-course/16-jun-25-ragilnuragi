@@ -1,0 +1,87 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  height: 50px;
+  align-content: center;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav a:active {
+  background-color: aqua;
+}
+
+nav a:hover {
+  background-color: aquamarine;
+}
+
+main {
+  display: flex;
+  gap: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+main > section {
+  flex: 1;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="number"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.form-hitung {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  height: 200px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: bisque;
+  margin-top: 10px;
+  padding: 5px;
+}
