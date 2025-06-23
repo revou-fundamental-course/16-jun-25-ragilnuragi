@@ -2,6 +2,7 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 header {
@@ -11,6 +12,40 @@ header {
 nav {
   display: flex;
   flex-direction: column;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.segitiga {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  padding: 20px;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.jajargenjang {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.segitiga section {
+  flex: 1;
+}
+.jajargenjang section {
+  flex: 1;
 }
 
 nav a {
@@ -32,15 +67,19 @@ nav a:hover {
 }
 
 main {
-  display: flex;
-  gap: 32px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-main > section {
-  flex: 1;
-  text-align: center;
+.segitiga {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Bisa diubah tergantung kebutuhan */
+  align-items: flex-start; /* Tambahan opsional */
+  width: 100vw; /* Pakai lebar viewport */
+  padding: 20px;
+  gap: 30px; /* Jarak antar section */
+  box-sizing: border-box;
 }
 
 form {
@@ -57,25 +96,37 @@ input[type="number"] {
   text-align: center;
 }
 
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 button {
-  background-color: #04aa6d; /* Green */
   border: none;
   color: white;
   padding: 13px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 5px;
   cursor: pointer;
   width: 20%;
-  align-self: center;
   border-radius: 8px;
 }
 
-button:hover {
+.hitung {
+  background-color: green;
+}
+.reset {
+  background-color: red;
+}
+
+.hitung:hover {
   background-color: greenyellow;
   color: black;
+}
+.reset:hover {
+  background-color: orange;
+  color: white;
 }
 
 .form-hitung {

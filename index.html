@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Matematik - Ragil</title>
+    <title>Website Kalkulator Matematika - Ragil</title>
 
     <!-- CSS Eksternal -->
     <link rel="stylesheet" href="css/style.css" />
@@ -12,76 +12,162 @@
     <!-- Head Content -->
     <header>
       <h1>Welcome To My Kalkulator</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint autem aperiam ab maiores, sit, consequuntur iure voluptates inventore laboriosam soluta
-        reprehenderit aliquid nostrum. Animi, et quas. Illo aliquam nulla quas!
-      </p>
+      <p>Ini adalah Kalkulator untuk menghitung luas dan keliling segitiga</p>
 
       <nav>
-        <a href="#segitiga" class="active">Segitiga</a>
-        <a href="">Persegi</a>
+        <a href="#segitiga">Segitiga</a>
+        <a href="#jajargenjang">Jajar Genjang</a>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-      <!-- luas -->
-      <section id="segitiga">
-        <header>
-          <h2>Luas Segitiga</h2>
-          <img
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtQj3damdUMrB7NGGoc1qp7hNlWdpC_GJxnkiaA9JpyXEbPzc24PEalidWP4du9LY7s1g51LweT-7lqlh83cXAf3fTHFTZrDkSlStPgey9bv8LvWrxvV1YnGNb3VRrOXcms6o6WVSmZv4/s1600/Rumus+Luas+Segitiga.png"
-            alt="luas-segitiga"
-          />
-        </header>
-
-        <!-- Form luas -->
-        <form>
+      <div id="segitiga" class="segitiga">
+        <!-- luas -->
+        <section>
           <header>
-            <h2>Form Luas Segitiga</h2>
+            <h2>Luas Segitiga</h2>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtQj3damdUMrB7NGGoc1qp7hNlWdpC_GJxnkiaA9JpyXEbPzc24PEalidWP4du9LY7s1g51LweT-7lqlh83cXAf3fTHFTZrDkSlStPgey9bv8LvWrxvV1YnGNb3VRrOXcms6o6WVSmZv4/s1600/Rumus+Luas+Segitiga.png"
+              alt="luas-segitiga"
+            />
           </header>
-          <div class="form-hitung">
-            <label for="alas">Alas</label>
-            <input type="number" name="alas" id="alas" placeholder="Masukkan Alas" />
 
-            <label for="tinggi">Tinggi</label>
-            <input type="number" name="tinggi" id="tinggi" placeholder="Masukkan Tinggi" />
-            <button>Hitung</button>
-          </div>
-        </form>
-      </section>
-      <!-- keliling -->
-      <section>
-        <header>
-          <h2>Keliling Segitiga</h2>
-          <img
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjkoFOsn_QGh-kmuBf0UxLzdqH8LUjDQMLILJZ8Ec5xVerp1faXAfbTvkie5CD8MqIlfBsG0kalPCaSJ0p5Cu7Aey5TholhhFSWhY-Ctd5YqjgABOKAsvuISdGDq-pDHAZ8EGS8YcnsvM/s400/Rumus+Keliling+Segitiga.png"
-            alt="keliling-segitiga"
-          />
-        </header>
-        <!-- Form luas -->
-        <form>
+          <!-- Form luas -->
+          <form id="luasSegitiga">
+            <header>
+              <h2>Form Luas Segitiga</h2>
+            </header>
+            <div class="form-hitung">
+              <label for="alas">Alas</label>
+              <input type="number" name="alas" id="alas" placeholder="Masukkan Alas" required />
+
+              <label for="tinggi">Tinggi</label>
+              <input type="number" name="tinggi" id="tinggi" placeholder="Masukkan Tinggi" required />
+
+              <p id="rumusLuas"></p>
+              <p id="nilaiLuas"></p>
+              <p id="luasJawaban"></p>
+
+              <div class="btn">
+                <button type="button" class="hitung" onclick="luasSegitiga()">Hitung</button>
+                <button type="button" class="reset" onclick="resetLuas()">Reset</button>
+              </div>
+            </div>
+          </form>
+        </section>
+        <!-- keliling -->
+        <section>
           <header>
-            <h2>Form Keliling Segitiga</h2>
+            <h2>Keliling Segitiga</h2>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjkoFOsn_QGh-kmuBf0UxLzdqH8LUjDQMLILJZ8Ec5xVerp1faXAfbTvkie5CD8MqIlfBsG0kalPCaSJ0p5Cu7Aey5TholhhFSWhY-Ctd5YqjgABOKAsvuISdGDq-pDHAZ8EGS8YcnsvM/s400/Rumus+Keliling+Segitiga.png"
+              alt="keliling-segitiga"
+            />
           </header>
-          <div class="form-hitung">
-            <label for="sisi-a">Sisi A</label>
-            <input type="number" name="sisi-a" id="sisi-a" placeholder="Masukkan Sisi 1" />
+          <!-- Form Keliling -->
+          <form id="kelilingSegitiga">
+            <header>
+              <h2>Form Keliling Segitiga</h2>
+            </header>
+            <div class="form-hitung">
+              <label for="sisi-a">Sisi A</label>
+              <input type="number" name="sisi-a" id="sisi-a" placeholder="Masukkan Sisi 1" />
 
-            <label for="sisi-b">Sisi B</label>
-            <input type="number" name="sisi-b" id="sisi-b" placeholder="Masukkan Sisi 2" />
+              <label for="sisi-b">Sisi B</label>
+              <input type="number" name="sisi-b" id="sisi-b" placeholder="Masukkan Sisi 2" />
 
-            <label for="sisi-c">Sisi C</label>
-            <input type="number" name="sisi-c" id="sisi-c" placeholder="Masukkan Sisi 3" />
-            <button>Hitung</button>
-          </div>
-        </form>
-      </section>
+              <label for="sisi-c">Sisi C</label>
+              <input type="number" name="sisi-c" id="sisi-c" placeholder="Masukkan Sisi 3" />
+
+              <p id="rumusKeliling"></p>
+              <p id="nilaiKeliling"></p>
+              <p id="kelilingJawaban"></p>
+
+              <div class="btn">
+                <button type="button" class="hitung" onclick="kelilingSegitiga()">Hitung</button>
+                <button type="button" class="reset" onclick="resetKeliling()">Reset</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div id="segitiga" class="segitiga">
+        <!-- luas -->
+        <section>
+          <header>
+            <h2>Luas Segitiga</h2>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtQj3damdUMrB7NGGoc1qp7hNlWdpC_GJxnkiaA9JpyXEbPzc24PEalidWP4du9LY7s1g51LweT-7lqlh83cXAf3fTHFTZrDkSlStPgey9bv8LvWrxvV1YnGNb3VRrOXcms6o6WVSmZv4/s1600/Rumus+Luas+Segitiga.png"
+              alt="luas-segitiga"
+            />
+          </header>
+
+          <!-- Form luas -->
+          <form id="luasSegitiga">
+            <header>
+              <h2>Form Luas Segitiga</h2>
+            </header>
+            <div class="form-hitung">
+              <label for="alas">Alas</label>
+              <input type="number" name="alas" id="alas" placeholder="Masukkan Alas" required />
+
+              <label for="tinggi">Tinggi</label>
+              <input type="number" name="tinggi" id="tinggi" placeholder="Masukkan Tinggi" required />
+
+              <p id="rumusLuas"></p>
+              <p id="nilaiLuas"></p>
+              <p id="luasJawaban"></p>
+
+              <div class="btn">
+                <button type="button" class="hitung" onclick="luasSegitiga()">Hitung</button>
+                <button type="button" class="reset" onclick="resetLuas()">Reset</button>
+              </div>
+            </div>
+          </form>
+        </section>
+        <!-- keliling -->
+        <section>
+          <header>
+            <h2>Keliling Segitiga</h2>
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjkoFOsn_QGh-kmuBf0UxLzdqH8LUjDQMLILJZ8Ec5xVerp1faXAfbTvkie5CD8MqIlfBsG0kalPCaSJ0p5Cu7Aey5TholhhFSWhY-Ctd5YqjgABOKAsvuISdGDq-pDHAZ8EGS8YcnsvM/s400/Rumus+Keliling+Segitiga.png"
+              alt="keliling-segitiga"
+            />
+          </header>
+          <!-- Form Keliling -->
+          <form id="kelilingSegitiga">
+            <header>
+              <h2>Form Keliling Segitiga</h2>
+            </header>
+            <div class="form-hitung">
+              <label for="sisi-a">Sisi A</label>
+              <input type="number" name="sisi-a" id="sisi-a" placeholder="Masukkan Sisi 1" />
+
+              <label for="sisi-b">Sisi B</label>
+              <input type="number" name="sisi-b" id="sisi-b" placeholder="Masukkan Sisi 2" />
+
+              <label for="sisi-c">Sisi C</label>
+              <input type="number" name="sisi-c" id="sisi-c" placeholder="Masukkan Sisi 3" />
+
+              <p id="rumusKeliling"></p>
+              <p id="nilaiKeliling"></p>
+              <p id="kelilingJawaban"></p>
+
+              <div class="btn">
+                <button type="button" class="hitung" onclick="kelilingSegitiga()">Hitung</button>
+                <button type="button" class="reset" onclick="resetKeliling()">Reset</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
 
     <!-- Footer Content -->
     <footer>
       <p>Copyright © 2025 Ragil Nurfadillah.</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
