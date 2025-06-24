@@ -1,4 +1,6 @@
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -10,23 +12,33 @@ body {
   overflow-x: hidden;
 }
 
+.head-content {
+  background-color: aqua;
+  margin: 0;
+  padding: 12px;
+}
+
+.head-content h1 {
+  margin-bottom: 20px;
+}
+
 header {
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+  display: none;
 }
 
 main {
   margin: 0;
   padding: 0;
+  background-color: #e6f0fa;
 }
 
-.segitiga,
-.jajargenjang {
+.segitiga {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,8 +48,7 @@ main {
   gap: 30px;
 }
 
-.segitiga section,
-.jajargenjang section {
+.segitiga section {
   flex: 1;
   background-color: white;
   padding: 10px;
@@ -55,17 +66,8 @@ nav a {
   cursor: pointer;
 }
 
-.active {
-  background-color: aqua;
-}
-
 nav a:hover {
   background-color: aquamarine;
-}
-
-main {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 p {
@@ -132,24 +134,26 @@ footer {
   display: flex;
   justify-content: center;
   background-color: bisque;
-  margin-top: 10px;
-  padding: 5px;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
-  .segitiga,
-  .jajargenjang {
+  .segitiga {
     flex-direction: column;
     padding: 10px;
     gap: 20px;
   }
 
   nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
     padding: 0 10px;
   }
 
   nav a {
     font-size: 16px;
+    margin: 5px;
   }
 
   img {

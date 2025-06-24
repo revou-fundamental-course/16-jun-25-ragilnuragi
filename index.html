@@ -10,21 +10,21 @@
   </head>
   <body>
     <!-- Head Content -->
-    <header>
+    <header class="head-content">
       <h1>Welcome To My Kalkulator</h1>
       <p>Ini adalah Kalkulator untuk menghitung luas dan keliling segitiga serta jajargenjang</p>
 
       <nav id="navbar">
-        <a href="#segitiga" class="nav active">Segitiga</a>
-        <a href="#jajargenjang" class="nav">Jajar Genjang</a>
+        <a href="#luas-segitiga">Luas Segitiga</a>
+        <a href="#keliling-segitiga">Keliling Segitiga</a>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-      <div id="segitiga" class="segitiga">
+      <section id="segitiga" class="segitiga">
         <!-- luas -->
-        <section>
+        <section id="luas-segitiga">
           <header>
             <h2>Luas Segitiga</h2>
             <img
@@ -45,6 +45,8 @@
               <label for="tinggi">Tinggi</label>
               <input type="number" name="tinggi" id="tinggi" placeholder="Masukkan Tinggi" required />
 
+              <span id="errorLuas" style="color: red"></span>
+
               <p id="rumusLuas"></p>
               <p id="nilaiLuas"></p>
               <p id="luasJawaban"></p>
@@ -57,7 +59,7 @@
           </form>
         </section>
         <!-- keliling -->
-        <section>
+        <section id="keliling-segitiga">
           <header>
             <h2>Keliling Segitiga</h2>
             <img
@@ -80,6 +82,8 @@
               <label for="sisi-c">Sisi C</label>
               <input type="number" name="sisi-c" id="sisi-c" placeholder="Masukkan Sisi 3" />
 
+              <span id="errorKeliling" style="color: red"></span>
+
               <p id="rumusKeliling"></p>
               <p id="nilaiKeliling"></p>
               <p id="kelilingJawaban"></p>
@@ -91,74 +95,7 @@
             </div>
           </form>
         </section>
-      </div>
-      <div id="jajargenjang" class="jajargenjang">
-        <!-- luas -->
-        <section>
-          <header>
-            <h2>Luas Jajargenjang</h2>
-            <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr7GGZqoyWNxcAVt_61z_1kXllrMcg6ZIxJiYbxhjQoDwsahdeEPy0ibGzqfLCJXpAysb-r4bPt2Icqb7LCBCksii7m7z5k2-K7gY-JeWOTa3b0aKRgkC-d2v1xhH7pcprGuM3q8_yS60/s320/Matematika+SD+-+Rumus+Luas+Jajaran+Genjang+-+2.png"
-              alt="luas-jajargenjang"
-            />
-          </header>
-
-          <!-- Form luas -->
-          <form id="luasJajargenjang">
-            <header>
-              <h2>Form Luas Jajargenjang</h2>
-            </header>
-            <div class="form-hitung">
-              <label for="alas-jajargenjang">Alas</label>
-              <input type="number" name="alas-jajargenjang" id="alasJajargenjang" placeholder="Masukkan Alas" required />
-
-              <label for="tinggi-jajargenjang">Tinggi</label>
-              <input type="number" name="tinggi-jajargenjang" id="tinggiJajargenjang" placeholder="Masukkan Tinggi" required />
-
-              <p id="rumusLuasJajargenjang"></p>
-              <p id="nilaiLuasJajargenjang"></p>
-              <p id="luasJawabanJajargenjang"></p>
-
-              <div class="btn">
-                <button type="button" class="hitung" onclick="luasJajargenjang()">Hitung</button>
-                <button type="button" class="reset" onclick="resetForm('luasJajargenjang')">Reset</button>
-              </div>
-            </div>
-          </form>
-        </section>
-        <!-- keliling -->
-        <section>
-          <header>
-            <h2>Keliling Jajargenjang</h2>
-            <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQ_RNYRW39zTx4NzM4IXZW9kn9I-hdGAY1b6_Of-HKFXqKkeArdw0qlYjWP9PZAyGz_PagGh721q78-cIrH9X3rPgoe8X968tHJAMZwXpdc1Exxr_RnB_ZGp2YrzaRmCoTiHUaN5SI7Lo/s640/matematika+SD+-+Rumus+Keliling+Jajaran+Genjang+-+2.png"
-              alt="keliling-segitiga"
-            />
-          </header>
-          <!-- Form Keliling -->
-          <form id="kelilingJajargenjang">
-            <header>
-              <h2>Form Keliling Jajargenjang</h2>
-            </header>
-            <div class="form-hitung">
-              <label for="panjang-alas">Panjang Alas</label>
-              <input type="number" name="panjang-alas" id="panjang-alas" placeholder="Masukkan Panjang Alas" required />
-
-              <label for="panjang-miring">Panjang Miring</label>
-              <input type="number" name="panjang-miring" id="panjang-miring" placeholder="Masukkan Panjang Miring" required />
-
-              <p id="rumusKelilingJajargenjang"></p>
-              <p id="nilaiKelilingJajargenjang"></p>
-              <p id="kelilingJawabanJajargenjang"></p>
-
-              <div class="btn">
-                <button type="button" class="hitung" onclick="kelilingJajargenjang()">Hitung</button>
-                <button type="button" class="reset" onclick="resetForm('kelilingJajargenjang')">Reset</button>
-              </div>
-            </div>
-          </form>
-        </section>
-      </div>
+      </section>
     </main>
 
     <!-- Footer Content -->
