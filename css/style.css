@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
   width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -12,6 +17,7 @@ header {
 nav {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 main {
@@ -19,33 +25,24 @@ main {
   padding: 0;
 }
 
-.segitiga {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100vw;
-  padding: 20px;
-  gap: 30px;
-  box-sizing: border-box;
-}
-
+.segitiga,
 .jajargenjang {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100vw;
+  justify-content: center;
+  width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  gap: 40px;
+  gap: 30px;
 }
 
-.segitiga section {
-  flex: 1;
-}
+.segitiga section,
 .jajargenjang section {
   flex: 1;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 nav a {
@@ -71,15 +68,8 @@ main {
   margin-bottom: 10px;
 }
 
-.segitiga {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Bisa diubah tergantung kebutuhan */
-  align-items: flex-start; /* Tambahan opsional */
-  width: 100vw; /* Pakai lebar viewport */
-  padding: 20px;
-  gap: 30px; /* Jarak antar section */
-  box-sizing: border-box;
+p {
+  margin: 0;
 }
 
 form {

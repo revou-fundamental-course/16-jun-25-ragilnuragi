@@ -51,7 +51,7 @@
 
               <div class="btn">
                 <button type="button" class="hitung" onclick="luasSegitiga()">Hitung</button>
-                <button type="button" class="reset" onclick="resetLuas()">Reset</button>
+                <button type="button" class="reset" onclick="resetForm('luasSegitiga')">Reset</button>
               </div>
             </div>
           </form>
@@ -86,42 +86,42 @@
 
               <div class="btn">
                 <button type="button" class="hitung" onclick="kelilingSegitiga()">Hitung</button>
-                <button type="button" class="reset" onclick="resetKeliling()">Reset</button>
+                <button type="button" class="reset" onclick="resetForm('kelilingSegitiga')">Reset</button>
               </div>
             </div>
           </form>
         </section>
       </div>
-      <div id="segitiga" class="segitiga">
+      <div id="jajargenjang" class="jajargenjang">
         <!-- luas -->
         <section>
           <header>
-            <h2>Luas Segitiga</h2>
+            <h2>Luas Jajargenjang</h2>
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtQj3damdUMrB7NGGoc1qp7hNlWdpC_GJxnkiaA9JpyXEbPzc24PEalidWP4du9LY7s1g51LweT-7lqlh83cXAf3fTHFTZrDkSlStPgey9bv8LvWrxvV1YnGNb3VRrOXcms6o6WVSmZv4/s1600/Rumus+Luas+Segitiga.png"
-              alt="luas-segitiga"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr7GGZqoyWNxcAVt_61z_1kXllrMcg6ZIxJiYbxhjQoDwsahdeEPy0ibGzqfLCJXpAysb-r4bPt2Icqb7LCBCksii7m7z5k2-K7gY-JeWOTa3b0aKRgkC-d2v1xhH7pcprGuM3q8_yS60/s320/Matematika+SD+-+Rumus+Luas+Jajaran+Genjang+-+2.png"
+              alt="luas-jajargenjang"
             />
           </header>
 
           <!-- Form luas -->
-          <form id="luasSegitiga">
+          <form id="luasJajargenjang">
             <header>
-              <h2>Form Luas Segitiga</h2>
+              <h2>Form Luas Jajargenjang</h2>
             </header>
             <div class="form-hitung">
-              <label for="alas">Alas</label>
-              <input type="number" name="alas" id="alas" placeholder="Masukkan Alas" required />
+              <label for="alas-jajargenjang">Alas</label>
+              <input type="number" name="alas-jajargenjang" id="alasJajargenjang" placeholder="Masukkan Alas" required />
 
-              <label for="tinggi">Tinggi</label>
-              <input type="number" name="tinggi" id="tinggi" placeholder="Masukkan Tinggi" required />
+              <label for="tinggi-jajargenjang">Tinggi</label>
+              <input type="number" name="tinggi-jajargenjang" id="tinggiJajargenjang" placeholder="Masukkan Tinggi" required />
 
-              <p id="rumusLuas"></p>
-              <p id="nilaiLuas"></p>
-              <p id="luasJawaban"></p>
+              <p id="rumusLuasJajargenjang"></p>
+              <p id="nilaiLuasJajargenjang"></p>
+              <p id="luasJawabanJajargenjang"></p>
 
               <div class="btn">
-                <button type="button" class="hitung" onclick="luasSegitiga()">Hitung</button>
-                <button type="button" class="reset" onclick="resetLuas()">Reset</button>
+                <button type="button" class="hitung" onclick="luasJajargenjang()">Hitung</button>
+                <button type="button" class="reset" onclick="resetForm('luasJajargenjang')">Reset</button>
               </div>
             </div>
           </form>
@@ -129,34 +129,31 @@
         <!-- keliling -->
         <section>
           <header>
-            <h2>Keliling Segitiga</h2>
+            <h2>Keliling Jajargenjang</h2>
             <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjkoFOsn_QGh-kmuBf0UxLzdqH8LUjDQMLILJZ8Ec5xVerp1faXAfbTvkie5CD8MqIlfBsG0kalPCaSJ0p5Cu7Aey5TholhhFSWhY-Ctd5YqjgABOKAsvuISdGDq-pDHAZ8EGS8YcnsvM/s400/Rumus+Keliling+Segitiga.png"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQ_RNYRW39zTx4NzM4IXZW9kn9I-hdGAY1b6_Of-HKFXqKkeArdw0qlYjWP9PZAyGz_PagGh721q78-cIrH9X3rPgoe8X968tHJAMZwXpdc1Exxr_RnB_ZGp2YrzaRmCoTiHUaN5SI7Lo/s640/matematika+SD+-+Rumus+Keliling+Jajaran+Genjang+-+2.png"
               alt="keliling-segitiga"
             />
           </header>
           <!-- Form Keliling -->
-          <form id="kelilingSegitiga">
+          <form id="kelilingJajargenjang">
             <header>
-              <h2>Form Keliling Segitiga</h2>
+              <h2>Form Keliling Jajargenjang</h2>
             </header>
             <div class="form-hitung">
-              <label for="sisi-a">Sisi A</label>
-              <input type="number" name="sisi-a" id="sisi-a" placeholder="Masukkan Sisi 1" />
+              <label for="panjang-alas">Panjang Alas</label>
+              <input type="number" name="panjang-alas" id="panjang-alas" placeholder="Masukkan Panjang Alas" required />
 
-              <label for="sisi-b">Sisi B</label>
-              <input type="number" name="sisi-b" id="sisi-b" placeholder="Masukkan Sisi 2" />
+              <label for="panjang-miring">Panjang Miring</label>
+              <input type="number" name="panjang-miring" id="panjang-miring" placeholder="Masukkan Panjang Miring" required />
 
-              <label for="sisi-c">Sisi C</label>
-              <input type="number" name="sisi-c" id="sisi-c" placeholder="Masukkan Sisi 3" />
-
-              <p id="rumusKeliling"></p>
-              <p id="nilaiKeliling"></p>
-              <p id="kelilingJawaban"></p>
+              <p id="rumusKelilingJajargenjang"></p>
+              <p id="nilaiKelilingJajargenjang"></p>
+              <p id="kelilingJawabanJajargenjang"></p>
 
               <div class="btn">
-                <button type="button" class="hitung" onclick="kelilingSegitiga()">Hitung</button>
-                <button type="button" class="reset" onclick="resetKeliling()">Reset</button>
+                <button type="button" class="hitung" onclick="kelilingJajargenjang()">Hitung</button>
+                <button type="button" class="reset" onclick="resetForm('kelilingJajargenjang')">Reset</button>
               </div>
             </div>
           </form>
