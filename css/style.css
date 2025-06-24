@@ -135,3 +135,29 @@ footer {
   margin-top: 10px;
   padding: 5px;
 }
+
+@media (max-width: 768px) {
+  .segitiga,
+  .jajargenjang {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  nav {
+    padding: 0 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
