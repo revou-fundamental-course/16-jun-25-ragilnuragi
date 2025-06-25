@@ -14,6 +14,7 @@
       <h1>Welcome To My Katik</h1>
       <p>Ini adalah Kalkulator untuk menghitung luas dan keliling segitiga</p>
 
+      <!-- navigasi (disembunyikan tapi ada ketika responsive) -->
       <nav id="navbar">
         <a href="#luas-segitiga">Luas Segitiga</a>
         <a href="#keliling-segitiga">Keliling Segitiga</a>
@@ -24,7 +25,7 @@
     <main>
       <section id="segitiga" class="segitiga">
         <!-- luas -->
-        <section id="luas-segitiga">
+        <section id="luas">
           <header>
             <h2>Luas Segitiga</h2>
             <img
@@ -34,7 +35,7 @@
           </header>
 
           <!-- Form luas -->
-          <form id="luasSegitiga">
+          <form id="luas-segitiga">
             <header>
               <h2>Form Luas Segitiga</h2>
             </header>
@@ -53,13 +54,13 @@
 
               <div class="btn">
                 <button type="button" class="hitung" onclick="luasSegitiga()">Hitung</button>
-                <button type="button" class="reset" onclick="resetForm('luasSegitiga')">Reset</button>
+                <button type="button" class="reset" onclick="resetForm('luas-segitiga')">Reset</button>
               </div>
             </div>
           </form>
         </section>
         <!-- keliling -->
-        <section id="keliling-segitiga">
+        <section id="keliling">
           <header>
             <h2>Keliling Segitiga</h2>
             <img
@@ -68,7 +69,7 @@
             />
           </header>
           <!-- Form Keliling -->
-          <form id="kelilingSegitiga">
+          <form id="keliling-segitiga">
             <header>
               <h2>Form Keliling Segitiga</h2>
             </header>
@@ -90,7 +91,7 @@
 
               <div class="btn">
                 <button type="button" class="hitung" onclick="kelilingSegitiga()">Hitung</button>
-                <button type="button" class="reset" onclick="resetForm('kelilingSegitiga')">Reset</button>
+                <button type="button" class="reset" onclick="resetForm('keliling-segitiga')">Reset</button>
               </div>
             </div>
           </form>
@@ -102,6 +103,8 @@
     <footer>
       <p>Copyright © 2025 Ragil Nurfadillah.</p>
     </footer>
+
+    <!-- Javascript Eksternal -->
     <script src="js/script.js"></script>
   </body>
 </html>

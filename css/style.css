@@ -1,3 +1,4 @@
+/* Reset dan pengaturan dasar */
 * {
   margin: 0px;
   padding: 0px;
@@ -12,6 +13,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Header bagian atas */
 .head-content {
   background-color: aqua;
   margin: 0;
@@ -22,22 +24,26 @@ body {
   margin-bottom: 20px;
 }
 
+/* Header utama */
 header {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
+/* Navigasi (disembunyikan) */
 nav {
   display: none;
 }
 
+/* Konten utama */
 main {
   margin: 0;
   padding: 0;
   background-color: #e6f0fa;
 }
 
+/* Bagian segitiga - tata letak dua kolom */
 .segitiga {
   display: flex;
   flex-direction: row;
@@ -48,6 +54,7 @@ main {
   gap: 30px;
 }
 
+/* Setiap section dalam .segitiga */
 .segitiga section {
   flex: 1;
   background-color: white;
@@ -56,6 +63,7 @@ main {
   flex-direction: column;
 }
 
+/* Link navigasi */
 nav a {
   height: 50px;
   align-content: center;
@@ -66,19 +74,23 @@ nav a {
   cursor: pointer;
 }
 
+/* Efek hover untuk link navigasi */
 nav a:hover {
   background-color: aquamarine;
 }
 
+/* Paragraph tanpa margin tambahan */
 p {
   margin: 0;
 }
 
+/* Gaya form - kolom */
 form {
   display: flex;
   flex-direction: column;
 }
 
+/* Input angka */
 input[type="number"] {
   padding: 12px 20px;
   margin: 8px 0;
@@ -88,11 +100,13 @@ input[type="number"] {
   text-align: center;
 }
 
+/* Tombol diletakkan sejajar dan merata */
 .btn {
   display: flex;
   justify-content: space-evenly;
 }
 
+/* Gaya umum tombol */
 button {
   border: none;
   color: white;
@@ -105,31 +119,40 @@ button {
   border-radius: 8px;
 }
 
+/* Warna tombol hitung */
 .hitung {
   background-color: green;
 }
+
+/* Warna tombol reset */
 .reset {
   background-color: red;
 }
 
+/* Efek hover tombol hitung */
 .hitung:hover {
   background-color: greenyellow;
   color: black;
 }
+
+/* Efek hover tombol reset */
 .reset:hover {
   background-color: orange;
   color: white;
 }
 
+/* Form khusus untuk perhitungan */
 .form-hitung {
   display: flex;
   flex-direction: column;
 }
 
+/* Ukuran gambar */
 img {
   height: 200px;
 }
 
+/* Footer */
 footer {
   display: flex;
   justify-content: center;
@@ -137,13 +160,16 @@ footer {
   padding: 10px;
 }
 
+/* Responsive Design  */
 @media (max-width: 768px) {
+  /* Tata letak segitiga jadi kolom saat layar kecil */
   .segitiga {
     flex-direction: column;
     padding: 10px;
     gap: 20px;
   }
 
+  /* Tampilkan navigasi di perangkat mobile */
   nav {
     display: flex;
     flex-direction: column;
@@ -151,16 +177,19 @@ footer {
     padding: 0 10px;
   }
 
+  /* Ukuran dan margin navigasi di mobile */
   nav a {
     font-size: 16px;
     margin: 5px;
   }
 
+  /* Ukuran gambar agar responsif */
   img {
     height: auto;
     max-width: 100%;
   }
 
+  /* Tombol melebar di layar kecil */
   button {
     width: 100%;
   }
